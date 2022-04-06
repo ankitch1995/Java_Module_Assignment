@@ -1,0 +1,20 @@
+<table>
+    <p>Movies To Watch</p>
+    <tbody>
+        <tr *ngFor="let movie of movies" class="mt">
+            <td style="float:left" >{{movie.id}}.{{movie.name}}</td>
+            <button (click)='addToWatchlist(movie)' class="btn btn-success mx-3">Add</button>
+        </tr>
+    </tbody>
+    <br>
+
+    <p>Watched Movies</p>
+    <tbody>
+            <tr *ngFor="let movie of watched">
+                <td style="float:left" >{{movie.id}}.{{movie.name}}</td>
+                <button (click)='removefromWatchlist()' class="btn btn-success">Remove</button>
+            </tr>
+        </tbody>
+        <br>
+
+</table>

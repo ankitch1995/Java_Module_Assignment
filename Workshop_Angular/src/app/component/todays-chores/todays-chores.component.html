@@ -1,0 +1,40 @@
+<div>
+    <h3>Chores</h3>
+    <ul *ngFor="let t of yesterdayChores">
+        <li>{{t.name}}</li>
+    </ul>
+   <div *ngIf='yesterdayChores.length >= 3'>
+        <img [src]='path'   [ngStyle]="{'background-color':'white'}" height="50px" width="50px">
+        No Allownce yet!
+   </div>
+    <br>
+
+    <h3>Today's Chores</h3>
+    <ul *ngFor="let t of todaysChores">
+        <li>{{t.name}}</li>
+    </ul>
+
+    <br>
+
+    <div  class="display-5" *ngIf="yesterdayChores.length!=0; then FinishBlock  else iceBlock">
+         
+    </div>
+
+    <ng-template #FinishBlock>
+            <h3>Finished Chores</h3>
+            <ul *ngFor="let t of yesterdayChores">
+                <li>{{t.name}}</li>
+            </ul>
+    </ng-template>
+
+    <ng-template #iceBlock>
+            <h3>To Earn an ice cream treat</h3>
+            <p>Chores list must be empty</p>
+    </ng-template >   
+    
+
+    <p class="display-5" [ngStyle]="{'background-color':'yellow'}" *ngIf='tommarowChores.length > todaysChores.length' >
+        Work Harder!!!</p>
+
+        
+</div>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <app-header></app-header>
+
+  <div class="container maindiv">
+
+    <div class="row">
+      <div class="col-4 d-flex justify-content-center  movietowatch">
+          <app-movies-to-watch></app-movies-to-watch>
+      </div>
+      <div class="col-4  d-flex justify-content-center  images">
+        <app-images></app-images>
+      </div>
+      <div class="col-4 d-flex justify-content-center  chores">
+          <app-todays-chores></app-todays-chores>
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-center" id="link">
+      <div class="col-3 d-flex justify-content-center ">
+        <app-favorite-links></app-favorite-links>
+      </div>
+    </div>
+  </div>
+  
+  <app-footer></app-footer>
+</body>
+</html>
