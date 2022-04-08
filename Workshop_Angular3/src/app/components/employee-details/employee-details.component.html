@@ -1,0 +1,70 @@
+<!-- <div class="card-deck">
+   
+    <div class="card" *ngFor="let employee of employees">
+      <img class="" [src]="employee.image" width="150" height="150">
+      <div class="card-body">
+        <h5 class="card-title">{{employee.empId}}</h5>
+        <p class="card-text">{{employee.name}}</p>
+        <p class="card-text"><small class="text-muted">{{employee.designation}}</small></p>
+      </div>
+      
+    </div>
+    
+    
+  </div> -->
+
+
+  <!-- <div class="card-deck" *ngFor="let employee of employees">
+    <div class="card">
+      <img class="" [src]="employee.image" width="150" height="150">
+      <div class="card-body">
+        <h5 class="card-title">{{employee.empId}}</h5>
+        <p class="card-text">{{employee.name}}</p>
+        <p class="card-text"><small class="text-muted">{{employee.designation}}</small></p>
+        <button class="btn-btn-primary" (click)="toogleImage(employee)">Click</button>
+      </div>
+    </div>
+    <div class="card">
+        <img class=""  *ngIf="employee.flag"  [src]="employee.image" width="150" height="150">
+        <div class="card-body">
+          <h5 class="card-title">{{employee.empId}}</h5>
+          <p class="card-text">{{employee.name}}</p>
+          <p class="card-text"><small class="text-muted">{{employee.designation}}</small></p>
+          <button class="btn-btn-primary" (click)="toogleImage(employee)">Click</button>
+        </div>
+      </div>
+      <div class="card">
+        <img class="" [src]="employee.image" width="150" height="150">
+        <div class="card-body">
+          <h5 class="card-title">{{employee.empId}}</h5>
+          <p class="card-text">{{employee.name}}</p>
+          <p class="card-text"><small class="text-muted">{{employee.designation}}</small></p>
+          <button class="btn-btn-primary" (click)="toogleImage(employee)">Click</button>
+        </div>
+      </div>
+  </div> -->
+
+
+  <input type="text" [(ngModel)]="searchStr">
+  You are searching according to {{searchStr}}
+
+  <app-parent></app-parent>
+  
+  <div class="container">
+    <div class="row" *ngIf="employees.length !=0;">
+        <div class="card" style="width:18rem;" *ngFor=" let employee of employees | search:searchStr">
+            <div class="col-sm-6">
+                <img class="card-img-top" *ngIf="employee.flag" [src]='employee.image' />
+                <div class="card-body">
+                    <h5 class="card-title">{{employee.name}}</h5>
+                    <h5 class="card-title">{{employee.designation}}</h5>
+                
+                    <button class="btn btn-success" (click)="toogleImage(employee)">click here</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+<body>
+    
+    <div class="grid-container">
+        <div class="grid-item"><b><u>{{header1}}</u></b> 
+            <div>
+                {{msg1}}<br>
+                {{msg2}}<br>
+                {{msg3}}<br>
+                {{msg4}}<br>
+                {{msg5}}<br>
+                {{msg6}}<br>
+            </div>
+        </div>
+        <div class="grid-item"><b><u>{{header2}}</u></b>
+            <div *ngFor="let image of IMAGES">
+                
+                <img [src] = 'image.path' height="150" width="150">
+                
+            </div>
+        </div>
+        <div class="grid-item"><b><u>{{header3}}</u></b>
+            <div>
+                {{msg7}}<br>
+                {{msg8}}<br>
+                {{msg9}}<br>
+                {{msg10}}<br>
+                {{msg11}}<br>
+            </div>
+        </div>   
+    </div>
+
+    
+
+
+</body>
+</html>

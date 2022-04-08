@@ -1,0 +1,126 @@
+<p>first works!</p>
+
+<form>
+    <label for="cars">Choose a car: </label>
+    &nbsp;
+    <select name="cars" id="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="opel">Opel</option>
+      <option value="audi">Audi</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+    <br>  
+
+
+<button (click)="sayHello()">Click Here</button>
+<br>
+<br>
+
+<input type="text" [(ngModel)] = "initialValue"> {{ initialValue }}
+
+<p *ngIf="showMe">
+    Hello Ankit !!!!!  
+</p>
+
+<br>
+<p *ngIf="!showMe">
+    Hello Sanjay !!!!!  
+</p>
+
+<p *ngIf="showMe; else elseBlock1" >
+    Hello Sunbeam !!!!!  
+</p>
+
+<ng-template #elseBlock1>
+    <p>Hello Cybage !!!!!</p>
+</ng-template>
+
+
+<p *ngIf="showMe; then thanBlock1 else elseBlock2" >
+    Not rendered
+</p>
+
+<ng-template #thanBlock1>
+    <p>Hello ThenBlock1 !!!!!</p>
+</ng-template>
+<ng-template #elseBlock2>
+    <p>Hello ThanBlock2 !!!!!</p>
+</ng-template>
+
+
+
+<p [hidden]="showMe">
+    Hedden paragraph !!!!......
+</p>
+
+<p [hidden]="!showMe">
+    Hedden paragraph for !equals!!!......
+</p>
+<br>
+
+<div class="card-body">
+
+Input String: <input type="text" [(ngModel)]="num"/>
+
+    <div [ngSwitch]="num">
+        <div *ngSwitchCase="'1'">One</div>
+        <div *ngSwitchCase="'2'">Two</div>
+        <div *ngSwitchCase="'3'">Three</div>
+        <div *ngSwitchCase="'4'">Four</div>
+        <div *ngSwitchCase="'5'">Five</div>
+        <div *ngSwitchCase="'6'">Six</div>
+        <div *ngSwitchDefault="This is Default"></div>
+    </div>
+</div>
+
+
+UpperCase :{{msg | uppercase}}
+LowerCase :{{msg | lowercase}}
+<br>
+{{toDate | date}}
+<p>medium : {{toDate | date:'medium'}} </p>
+              <p>short : {{toDate | date:'short'}} </p>
+              <p>fullDate : {{toDate | date:'fullDate'}} </p>
+              <p>longDate : {{toDate | date:'longDate'}} </p>
+              <p>mediumDate : {{toDate | date:'mediumDate'}} </p>
+              <p>shortDate : {{toDate | date:'shortDate'}} </p>
+              <p>mediumTime : {{toDate | date:'mediumTime'}} </p>
+              <p>dd-MM-y : {{toDate | date:'dd-MM-y'}} </p>
+              <p>dd-MM-yy HH:mm : {{toDate | date:'dd-MM-yy HH:mm'}}
+
+
+    <p>Unformated: {{cur}}    </p>
+    <p>Example : {{cur | currency}}</p>
+<!-- 
+    Using default format:
+    currencyCode = USD
+    symbolDisplay = false
+    minimumIntegerDigit = 1
+    minimum fractionDigits = 3 -->
+
+
+
+
+    <p>Example 2 :{{cur | currency:'INR':true:'4.2-2'}}<br>
+
+    {{2.5|percent}}<br>     <!-- 250% -->
+    <br>
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+    
+
+
+
+
